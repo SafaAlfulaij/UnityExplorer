@@ -78,7 +78,7 @@ namespace UnityExplorer
 
             // check master toggle
             if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value)) {
-                Log("Switching...")
+                Log("Switching...");
                 UIManager.ShowMenu = !UIManager.ShowMenu;
             }
         }
