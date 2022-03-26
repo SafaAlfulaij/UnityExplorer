@@ -77,12 +77,14 @@ namespace UnityExplorer
 
             // check master toggle
             if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value)) {
-                Log("Switching...");
+                Log($"Switching to {!UIManager.ShowMenu}...");
                 Log(Camera.main);
                 Log(Camera.current);
                 Log(UIManager.UICanvas);
+                Log(UIManager.UICanvas.renderMode);
+                Log(UIManager.UICanvas.GetComponent<RectTransform>());
                 UIManager.UICanvas.overrideSorting = true;
-                UIManager.UICanvas.sortingOrder = 1000000;
+                UIManager.UICanvas.sortingOrder = 10000000;
                 UIManager.ShowMenu = !UIManager.ShowMenu;
             }
         }
