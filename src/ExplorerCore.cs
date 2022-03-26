@@ -80,8 +80,9 @@ namespace UnityExplorer
                 Log("Switching...");
                 Log(Camera.main);
                 Log(Camera.current);
-                Log(UIManager.UIRoot.GetComponent<Renderer>());
-                Log(UIManager.UIRoot.GetComponent<Renderer>().isVisible);
+                Log(UIManager.UICanvas);
+                UIManager.UICanvas.overrideSorting = true;
+                UIManager.UICanvas.sortingOrder = 1000000;
                 UIManager.ShowMenu = !UIManager.ShowMenu;
             }
         }
