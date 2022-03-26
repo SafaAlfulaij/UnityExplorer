@@ -79,7 +79,7 @@ namespace UnityExplorer
                  // Change the next update (current second+1)
                  nextUpdate=Mathf.FloorToInt(Time.time)+1;
                  // Call your fonction
-                 UpdateEverySecond();
+                Log("Still running...");
              }
 
             // check master toggle
@@ -87,10 +87,6 @@ namespace UnityExplorer
                 UIManager.ShowMenu = !UIManager.ShowMenu;
         }
         
-        private void UpdateEverySecond()
-        {
-            Log("Still running...");
-        }
 
         #region LOGGING
 
