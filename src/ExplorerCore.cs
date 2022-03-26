@@ -76,16 +76,11 @@ namespace UnityExplorer
         {
             UIManager.Update();
 
-            if(Time.time>=nextUpdate){
-                 // Change the next update (current second+1)
-                 nextUpdate=Mathf.FloorToInt(Time.time)+1;
-                 // Call your fonction
-                Log("Still running...");
-             }
-
             // check master toggle
-            if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value))
+            if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value)) {
+                Log("Switching...")
                 UIManager.ShowMenu = !UIManager.ShowMenu;
+            }
         }
         
 
