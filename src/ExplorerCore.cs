@@ -78,9 +78,15 @@ namespace UnityExplorer
             // check master toggle
             if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value)) {
                 Log($"Switching to {!UIManager.ShowMenu}...");
-                Log(Camera.main);
-                Log(Camera.current);
-                Log(UIManager.UICanvas);
+                Log($"main {Camera.main}");
+                var output = JsonUtility.ToJson(Camera.main, true);
+                Log(output);
+                Log(${"current {Camera.current}");
+                var output = JsonUtility.ToJson(Camera.current, true);
+                Log(output);
+                Log($"canvas {UIManager.UICanvas}");
+                var output = JsonUtility.ToJson(UIManager.UICanvas, true);
+                Log(output);
                 Log(UIManager.UICanvas.renderMode);
                 Log(UIManager.UICanvas.GetComponent<RectTransform>());
                 UIManager.UICanvas.overrideSorting = true;
