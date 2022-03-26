@@ -81,7 +81,7 @@ namespace UnityExplorer
                 Log(Camera.main);
                 Log(Camera.current);
                 Log(UIManager.UIRoot.GetComponent<Renderer>());
-                Log(UIManager.UIRoot.GetComponent<Renderer>().isVisible;
+                Log(UIManager.UIRoot.GetComponent<Renderer>().isVisible);
                 UIManager.ShowMenu = !UIManager.ShowMenu;
             }
         }
