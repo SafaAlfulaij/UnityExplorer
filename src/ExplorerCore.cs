@@ -81,7 +81,7 @@ namespace UnityExplorer
                 Log($"main {Camera.main}");
                 var output = JsonUtility.ToJson(Camera.main, true);
                 Log(output);
-                Log(${"current {Camera.current}");
+                Log($"current {Camera.current}");
                 var output = JsonUtility.ToJson(Camera.current, true);
                 Log(output);
                 Log($"canvas {UIManager.UICanvas}");
