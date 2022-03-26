@@ -11,6 +11,7 @@ namespace UnityExplorer
 {
     public static class ExplorerCore
     {
+        private int nextUpdate = 1;
         public const string NAME = "UnityExplorer";
         public const string VERSION = "4.6.1";
         public const string AUTHOR = "Sinai";
