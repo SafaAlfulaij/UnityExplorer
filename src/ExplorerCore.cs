@@ -1,6 +1,7 @@
 ﻿using System.IO;
+using System.Text.Json;
+
 using UnityEngine;
-using UnityEngine.JSONSerializeModule;
 using UnityExplorer.Config;
 using UnityExplorer.ObjectExplorer;
 using UnityExplorer.Runtime;
@@ -80,13 +81,13 @@ namespace UnityExplorer
             if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value)) {
                 Log($"Switching to {!UIManager.ShowMenu}...");
                 Log($"main {Camera.main}");
-                var output = JsonUtility.ToJson(Camera.main, true);
+                var output = JsonSerializer.Serialize(Camera.main, true);
                 Log(output);
                 Log($"current {Camera.current}");
-                var output = JsonUtility.ToJson(Camera.current, true);
+                var output = JsonSerializer.Serialize(Camera.current, true);
                 Log(output);
                 Log($"canvas {UIManager.UICanvas}");
-                var output = JsonUtility.ToJson(UIManager.UICanvas, true);
+                var output = JsonSerializer.Serialize(UIManager.UICanvas, true);
                 Log(output);
                 Log(UIManager.UICanvas.renderMode);
                 Log(UIManager.UICanvas.GetComponent<RectTransform>());
