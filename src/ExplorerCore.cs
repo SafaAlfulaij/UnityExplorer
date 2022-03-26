@@ -78,10 +78,13 @@ namespace UnityExplorer
             // check master toggle
             if (InputManager.GetKeyDown(ConfigManager.Master_Toggle.Value)) {
                 Log("Switching...");
+                Log(Camera.main);
+                Log(Camera.current);
+                Log(UIManager.UIRoot.GetComponent<Renderer>());
+                Log(UIManager.UIRoot.GetComponent<Renderer>().isVisible;
                 UIManager.ShowMenu = !UIManager.ShowMenu;
             }
         }
-        
 
         #region LOGGING
 
